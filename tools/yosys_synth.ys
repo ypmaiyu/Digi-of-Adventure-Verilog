@@ -1,0 +1,11 @@
+# Yosys synthesis estimate for the Artix-7 (run from fpga/mem so $readmemh finds the .mem files):
+#   cd fpga/mem && yosys -q -l ../build/yosys/synth.log ../tools/yosys_synth.ys
+# This is an ESTIMATE of LUT / FF / BRAM / DSP use. The real numbers come from Vivado.
+read_verilog -I../rtl/gen -I../rtl/video -I../rtl/shared ../rtl/top/nexys_a7_top.v ../rtl/flow/game_flow.v ../rtl/flow/story.v
+read_verilog -I../rtl/gen -I../rtl/video -I../rtl/shared ../rtl/stage1/stage1.v ../rtl/stage1/s1_puzzles.v ../rtl/stage1/s1_collision.v
+read_verilog -I../rtl/gen -I../rtl/video -I../rtl/shared ../rtl/stage2/stage2.v ../rtl/stage3/stage3.v
+read_verilog -I../rtl/gen -I../rtl/video -I../rtl/shared ../rtl/shared/card_deck.v ../rtl/shared/heart_armor.v ../rtl/shared/sprite_anim.v
+read_verilog -I../rtl/gen -I../rtl/video -I../rtl/shared ../rtl/core/input_ctrl.v ../rtl/core/seg7_ctrl.v
+read_verilog -I../rtl/gen -I../rtl/video -I../rtl/shared ../rtl/video/vga_timing.v ../rtl/video/asset_roms.v ../rtl/video/line_engine.v ../rtl/video/ui_painter.v ../rtl/video/video_core.v
+synth_xilinx -top nexys_a7_top -family xc7
+tee -o ../build/yosys/stat.txt stat

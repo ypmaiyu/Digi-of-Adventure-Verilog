@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Fri Nov 27 00:04:18 2026
+# Process ID         : 13864
+# Current directory  : C:/Users/LENOVO/Desktop/fpga
+# Command line       : vivado.exe -mode batch -source vivado/build.tcl -journal build/vivado/vivado.jou -log build/vivado/vivado.log
+# Log file           : C:/Users/LENOVO/Desktop/fpga/build/vivado/vivado.log
+# Journal file       : C:/Users/LENOVO/Desktop/fpga\build/vivado/vivado.jou
+# Running On         : LAPTOP-0BCD1PBG
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : AMD Ryzen 7 8845HS w/ Radeon 780M Graphics
+# CPU Frequency      : 3793 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 14827 MB
+# Swap memory        : 13958 MB
+# Total Virtual      : 28786 MB
+# Available Virtual  : 6435 MB
+#-----------------------------------------------------------
+source vivado/build.tcl

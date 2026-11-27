@@ -1,0 +1,542 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Fri Nov 27 20:52:08 2026
+| Host         : LAPTOP-0BCD1PBG running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file nexys_a7_top_control_sets_placed.rpt
+| Design       : nexys_a7_top
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   464 |
+|    Minimum number of control sets                        |   464 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |  1176 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   464 |
+| >= 0 to < 4        |    27 |
+| >= 4 to < 6        |   143 |
+| >= 6 to < 8        |    55 |
+| >= 8 to < 10       |    25 |
+| >= 10 to < 12      |    15 |
+| >= 12 to < 14      |     8 |
+| >= 14 to < 16      |     9 |
+| >= 16              |   182 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |            1285 |          715 |
+| No           | No                    | Yes                    |               4 |            3 |
+| No           | Yes                   | No                     |            1630 |          726 |
+| Yes          | No                    | No                     |            2639 |         1097 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |            2386 |          931 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------+---------------------------------------------------+------------------------------------------+------------------+----------------+--------------+
+| Clock Signal |                   Enable Signal                   |             Set/Reset Signal             | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------+---------------------------------------------------+------------------------------------------+------------------+----------------+--------------+
+|  clk         | u_game/u_s2/skill_t[9]_i_2__0_n_0                 | u_game/u_s2/skill_t[5]_i_1_n_0           |                1 |              1 |         1.00 |
+|  clk         | u_game/u_s2/rf_i[5]_i_2_n_0                       | u_game/u_s2/rf_i[5]_i_1_n_0              |                1 |              1 |         1.00 |
+|  clk         | u_game/u_s3/a_act_reg_0_31_0_0_i_2_n_0            |                                          |                1 |              1 |         1.00 |
+|  clk         | u_game/u_s3/a_act_reg_0_15_0_0_i_1_n_0            |                                          |                1 |              1 |         1.00 |
+|  clk         | u_game/u_s3/a_alive_reg_0_15_0_0_i_1_n_0          |                                          |                1 |              1 |         1.00 |
+|  clk         | u_game/u_s3/rt_n[4]_i_2_n_0                       | u_game/u_s3/rt_n[4]_i_1_n_0              |                1 |              1 |         1.00 |
+|  clk         | u_game/u_s3/a_alive_reg_0_31_0_0_i_2_n_0          |                                          |                1 |              1 |         1.00 |
+|  clk         | u_game/u_s3/flash_t[4]_i_2_n_0                    | u_game/u_s3/flash_t[4]_i_1_n_0           |                1 |              1 |         1.00 |
+|  clk         | u_game/u_s2/u_deck/hearts_reg[1]                  | u_game/u_s2/u_deck/u_reg[4]_rep__0_0     |                1 |              1 |         1.00 |
+|  clk         | u_game/u_s2/fn_i[5]_i_2_n_0                       | u_game/u_s2/fn_i[5]_i_1_n_0              |                1 |              1 |         1.00 |
+|  clk         | u_game/u_s3/a_dir_reg_0_15_0_0_i_1_n_0            |                                          |                1 |              2 |         2.00 |
+|  clk         | u_game/u_s2/skill_t[9]_i_2__0_n_0                 | u_game/u_s2/skill_t[9]_i_1__0_n_0        |                2 |              2 |         1.00 |
+|  clk         | u_game/u_s2/u_deck/u_reg[4]_rep__2                | u_game/u_s2/u_deck/u_reg[4]_rep          |                1 |              2 |         2.00 |
+|  clk         | u_game/u_s2/hist_hi__0                            |                                          |                1 |              2 |         2.00 |
+|  clk         | u_game/u_s3/a_dir_reg_0_31_0_0_i_2_n_0            |                                          |                1 |              2 |         2.00 |
+|  clk         | u_game/u_s2/u_bb_eval/sph_reg_0_15_0_0__0_i_1_n_0 |                                          |                1 |              2 |         2.00 |
+|  clk         | u_game/u_s2/u_bb_eval/sph_reg_0_15_0_0_i_2_n_0    |                                          |                1 |              2 |         2.00 |
+|  clk         | u_game/u_s2/u_deck/u_reg[5]_rep__1                | u_game/u_s2/u_deck/u_reg[2]_rep          |                1 |              2 |         2.00 |
+|  clk         | u_game/u_s2/u_deck/u_reg[5]_rep__1                |                                          |                1 |              2 |         2.00 |
+|  clk         | u_game/u_s2/rf_i[5]_i_2_n_0                       |                                          |                2 |              3 |         1.50 |
+|  clk         | u_game/u_s3/tea_tops_r                            |                                          |                2 |              3 |         1.50 |
+|  clk         | u_game/u_s3/flash_t[4]_i_2_n_0                    |                                          |                2 |              3 |         1.50 |
+|  clk         | u_game/u_s3/fl_slot_reg_0_15_0_0_i_1_n_0          |                                          |                1 |              3 |         3.00 |
+|  clk         | u_game/u_s2/u_deck/u_reg[4]_rep__2                |                                          |                2 |              3 |         1.50 |
+|  clk         | u_game/u_s3/fl_slot_reg_0_31_0_0_i_1_n_0          |                                          |                1 |              3 |         3.00 |
+|  clk         | u_game/u_s2/fn_i[5]_i_2_n_0                       |                                          |                1 |              3 |         3.00 |
+|  clk         | u_game/u_s2/u_deck/hearts_reg[1]                  |                                          |                1 |              3 |         3.00 |
+|  clk         | u_game/u_s2/note_n[3]_i_1_n_0                     |                                          |                1 |              4 |         4.00 |
+|  clk         | u_game/u_s3/skill_t[13]_i_2_n_0                   | u_game/u_s3/skill_t[9]_i_1_n_0           |                2 |              4 |         2.00 |
+|  clk         | u_game/u_s3/clear_left[13]_i_2_n_0                | u_game/u_s3/clear_left[7]_i_1_n_0        |                2 |              4 |         2.00 |
+|  clk         | u_game/u_s2/u_deck/rst_ff_reg[3]_0                |                                          |                2 |              4 |         2.00 |
+|  clk         | u_game/u_s1/dig[1][3]_i_1_n_0                     | u_game/u_s1/done_i_1__4_n_0              |                1 |              4 |         4.00 |
+|  clk         | u_game/u_s3/px[31]_i_1_n_0                        | u_game/u_s3/px[14]_i_1_n_0               |                1 |              4 |         4.00 |
+|  clk         | u_game/u_s1/dig[0][3]_i_1_n_0                     | u_game/u_s1/done_i_1__4_n_0              |                1 |              4 |         4.00 |
+|  clk         | u_game/u_s1/dig[3][3]_i_1_n_0                     | u_game/u_s1/done_i_1__4_n_0              |                1 |              4 |         4.00 |
+|  clk         | u_game/u_s3/n_vis[4]_i_1_n_0                      |                                          |                3 |              4 |         1.33 |
+|  clk         | u_game/u_s1/dig[4][3]_i_1_n_0                     | u_game/u_s1/done_i_1__4_n_0              |                1 |              4 |         4.00 |
+|  clk         | u_game/u_s3/msg[3]_i_1_n_0                        | rst                                      |                2 |              4 |         2.00 |
+|  clk         | u_game/u_s3/lift_top0[30]_i_2_n_0                 |                                          |                3 |              4 |         1.33 |
+|  clk         | u_game/u_s3/jump_req[3]_i_2_n_0                   | u_game/u_s3/jump_req[3]_i_1_n_0          |                2 |              4 |         2.00 |
+|  clk         | u_video/u_tim/eng_start0                          |                                          |                1 |              4 |         4.00 |
+|  clk         | u_game/u_s2/u_deck/u_reg[4]_rep__2                | u_game/u_s2/u_deck/round_reg[0]_0        |                2 |              4 |         2.00 |
+|  clk         | u_video/u_paint/k[3]_i_1_n_0                      |                                          |                1 |              4 |         4.00 |
+|  clk         | u_game/u_s1/dig[2][3]_i_1_n_0                     | u_game/u_s1/done_i_1__4_n_0              |                1 |              4 |         4.00 |
+|  clk         | u_game/u_s3/rt_n[4]_i_2_n_0                       |                                          |                3 |              4 |         1.33 |
+|  clk         |                                                   | u_in/sw_reg[1]_8[0]                      |                3 |              4 |         1.33 |
+|  clk         | u_game/u_s1/p3_cur[3]_i_1_n_0                     | u_game/u_s1/done_i_1__4_n_0              |                1 |              4 |         4.00 |
+|  clk         | u_game/u_s3/fl_d_reg_0_127_0_0_i_2_n_0            |                                          |                1 |              4 |         4.00 |
+|  clk         | u_game/u_s3/fl_d_reg_256_383_0_0_i_1_n_0          |                                          |                1 |              4 |         4.00 |
+|  clk         | u_game/u_s3/fl_d_reg_384_511_0_0_i_1_n_0          |                                          |                1 |              4 |         4.00 |
+|  clk         | u_game/u_s3/fl_d_reg_128_255_0_0_i_1_n_0          |                                          |                1 |              4 |         4.00 |
+|  clk         | u_game/u_s1/near_id[2]_i_1_n_0                    | rst                                      |                2 |              4 |         2.00 |
+|  clk         | u_video/u_eng/pa_alpha[3]_i_1_n_0                 | u_video/u_eng/pa_base[17]_i_1_n_0        |                1 |              4 |         4.00 |
+|  clk         |                                                   | rst_ff[3]_i_1_n_0                        |                3 |              4 |         1.33 |
+|  clk         | u_game/u_story/cy_r_reg_0_63_0_2_i_2_n_0          |                                          |                1 |              4 |         4.00 |
+|  clk         | u_video/u_tim/eng_start0                          | u_video/u_tim/vc_reg[3]_0                |                1 |              4 |         4.00 |
+|  clk         | u_game/u_s1/u_deck/u_reg[2]_0                     | u_game/u_s1/done_i_1__4_n_0              |                2 |              4 |         2.00 |
+|  clk         | u_game/u_s1/u_deck/u_reg[1]_0                     | u_game/u_s1/done_i_1__4_n_0              |                2 |              4 |         2.00 |
+|  clk         | u_game/u_s2/bk_i                                  | u_game/u_s2/bk_res55_out                 |                2 |              4 |         2.00 |
+|  clk         | u_game/u_s2/hint_ttl[3]_i_1_n_0                   |                                          |                1 |              4 |         4.00 |
+|  clk         | u_game/u_s1/u_ha/blocked_reg_0[0]                 | rst                                      |                4 |              4 |         1.00 |
+|  clk         | u_game/u_s2/w[0][4]_i_1_n_0                       |                                          |                4 |              4 |         1.00 |
+|  clk         | u_video/u_paint/plist[90]_i_1_n_0                 | u_video/u_paint/plist[59]_i_1_n_0        |                2 |              4 |         2.00 |
+|  clk         |                                                   | u_game/u_s3/tsec14_r[7]_i_1_n_0          |                2 |              4 |         2.00 |
+|  clk         | u_video/u_eng/FSM_sequential_st[3]_i_1_n_0        | rst                                      |                2 |              4 |         2.00 |
+|  clk         | u_game/u_s1/u[3]_i_1__1_n_0                       | u_game/u_s1/done_i_1__4_n_0              |                2 |              4 |         2.00 |
+|  clk         | u_in/wsrc_on_reg_3[0]                             |                                          |                3 |              4 |         1.33 |
+|  clk         | u_game/u_s2/u_deck/hearts_reg[1]                  | u_game/u_s2/u_deck/hearts_reg[1]_1       |                2 |              4 |         2.00 |
+|  clk         | u_in/boot_reg[0]                                  | rst                                      |                3 |              4 |         1.33 |
+|  clk         | u_game/d_st_end_num                               | rst                                      |                1 |              4 |         4.00 |
+|  clk         | u_game/u_s2/sp_dy[1]_i_1_n_0                      |                                          |                2 |              4 |         2.00 |
+|  clk         |                                                   | u_game/u_s1/freeze_s_str[149]_i_1__0_n_0 |                1 |              5 |         5.00 |
+|  clk         | u_game/u_s2/w[49][4]_i_1_n_0                      |                                          |                3 |              5 |         1.67 |
+|  clk         | u_game/u_s2/w[5][4]_i_1_n_0                       |                                          |                2 |              5 |         2.50 |
+|  clk         |                                                   | u_game/u_s1/slow_s_str[149]_i_1__0_n_0   |                1 |              5 |         5.00 |
+|  clk         | u_game/u_s2/w[51][4]_i_1_n_0                      |                                          |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/w[4][4]_i_1_n_0                       |                                          |                2 |              5 |         2.50 |
+|  clk         |                                                   | u_game/u_s1/cam2                         |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/w[53][4]_i_1_n_0                      |                                          |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/w[50][4]_i_1_n_0                      |                                          |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/w[52][4]_i_1_n_0                      |                                          |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/w[9][4]_i_1_n_0                       |                                          |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/w[6][4]_i_1_n_0                       |                                          |                2 |              5 |         2.50 |
+|  clk         |                                                   | u_game/u_s2/tr_col_r[8]_i_1_n_0          |                5 |              5 |         1.00 |
+|  clk         |                                                   | u_game/u_s2/SR[0]                        |                2 |              5 |         2.50 |
+|  clk         |                                                   | u_game/u_s2/freeze_sec_r_reg[1]_0[0]     |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/w[8][4]_i_1_n_0                       |                                          |                3 |              5 |         1.67 |
+|  clk         | u_game/u_s3/tea_tops_r                            | u_game/u_s3/tea_tops_r[9]_i_1_n_0        |                3 |              5 |         1.67 |
+|  clk         | u_game/u_s2/w[7][4]_i_1_n_0                       |                                          |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/w[10][4]_i_1_n_0                      |                                          |                3 |              5 |         1.67 |
+|  clk         | u_game/u_s3/retreat_t[13]_i_2_n_0                 |                                          |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/wprev[4]_i_2_n_0                      | u_game/u_s2/wprev[4]_i_1_n_0             |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/wsrc[4]_i_1_n_0                       |                                          |                2 |              5 |         2.50 |
+|  clk         | u_video/u_paint/plist[90]_i_1_n_0                 | u_video/u_paint/plist[82]_i_1_n_0        |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/w[41][4]_i_1_n_0                      |                                          |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s3/fl_wp[7][5]_i_2_n_0                   | u_game/u_s3/fl_wp[7][5]_i_1_n_0          |                3 |              5 |         1.67 |
+|  clk         |                                                   | u_in/sw_reg[15]_0[7]                     |                5 |              5 |         1.00 |
+|  clk         |                                                   | u_in/sw_reg[4]_33[2]                     |                5 |              5 |         1.00 |
+|  clk         |                                                   | u_in/sw_reg[4]_33[1]                     |                2 |              5 |         2.50 |
+|  clk         |                                                   | u_in/sw_reg[4]_33[0]                     |                4 |              5 |         1.25 |
+|  clk         | u_game/u_s3/fl_wp[6][5]_i_2_n_0                   | u_game/u_s3/fl_wp[6][5]_i_1_n_0          |                3 |              5 |         1.67 |
+|  clk         | u_game/u_s3/fl_wp[2][5]_i_2_n_0                   | u_game/u_s3/fl_wp[2][5]_i_1_n_0          |                5 |              5 |         1.00 |
+|  clk         | u_game/u_s3/fl_wp[5][5]_i_2_n_0                   | u_game/u_s3/fl_wp[5][5]_i_1_n_0          |                3 |              5 |         1.67 |
+|  clk         | u_game/u_s1/u_ha/hit_reg_0[0]                     | u_game/u_s1/done_i_1__4_n_0              |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s3/fl_wp[4][5]_i_2_n_0                   | u_game/u_s3/fl_wp[4][5]_i_1_n_0          |                4 |              5 |         1.25 |
+|  clk         | u_game/u_s3/fl_wp[0][5]_i_2_n_0                   | u_game/u_s3/fl_wp[0][5]_i_1_n_0          |                5 |              5 |         1.00 |
+|  clk         | u_game/u_s1/ha_load_i_1_n_0                       | u_game/u_s1/done_i_1__4_n_0              |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s3/fl_wp[3][5]_i_2_n_0                   | u_game/u_s3/fl_wp[3][5]_i_1_n_0          |                5 |              5 |         1.00 |
+|  clk         | u_game/u_s3/fl_wp[1][5]_i_2_n_0                   | u_game/u_s3/fl_wp[1][5]_i_1_n_0          |                4 |              5 |         1.25 |
+|  clk         | u_game/u_s1/p5[2][4]_i_1_n_0                      | u_game/u_s1/done_i_1__4_n_0              |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s1/p5[0][4]_i_1_n_0                      | u_game/u_s1/done_i_1__4_n_0              |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s1/p5[1][4]_i_1_n_0                      | u_game/u_s1/done_i_1__4_n_0              |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s3/fall_land_r                           |                                          |                3 |              5 |         1.67 |
+|  clk         | u_game/u_s1/sp_dx                                 |                                          |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s1/dk_open                               | u_game/u_s1/u_deck/SR[0]                 |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/u_bb_eval/sp__0                       | u_game/u_s2/cv_start_reg_n_0             |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/u_bb_eval/cn[4]_i_1_n_0               |                                          |                1 |              5 |         5.00 |
+|  clk         | u_game/u_s3/ei[5]_i_2_n_0                         |                                          |                5 |              5 |         1.00 |
+|  clk         | u_game/u_s2/cv_node[4]_i_1_n_0                    |                                          |                3 |              5 |         1.67 |
+|  clk         | u_game/u_s1/cmsg[4]_i_1_n_0                       | u_game/u_s1/done_i_1__4_n_0              |                5 |              5 |         1.00 |
+|  clk         | u_game/u_s2/u_deck/E[0]                           | u_game/u_s2/u_deck/skipped_reg_0[0]      |                3 |              5 |         1.67 |
+|  clk         | u_game/u_s3/e_touch_r44_out                       | u_game/u_s3/e_col_r[7]_i_1_n_0           |                5 |              5 |         1.00 |
+|  clk         | u_game/u_s2/ms_i[4]_i_1_n_0                       |                                          |                1 |              5 |         5.00 |
+|  clk         | u_game/u_s2/ms_n[4]_i_1_n_0                       |                                          |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/ms_k[4]_i_1_n_0                       |                                          |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/msel[4]_i_2_n_0                       | u_game/u_s2/msel[4]_i_1_n_0              |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/parts[4]_i_1_n_0                      |                                          |                3 |              5 |         1.67 |
+|  clk         | u_game/u_s2/flash_t[4]_i_1__0_n_0                 |                                          |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/ev_code[2]_i_1_n_0                    |                                          |                3 |              5 |         1.67 |
+|  clk         | u_game/u_s2/dk_open_reg_n_0                       | u_game/u_s2/u_deck/SR[0]                 |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/w[14][4]_i_1_n_0                      |                                          |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/w[11][4]_i_1_n_0                      |                                          |                3 |              5 |         1.67 |
+|  clk         | u_game/u_s2/w[12][4]_i_1_n_0                      |                                          |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/w[13][4]_i_1_n_0                      |                                          |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/w[17][4]_i_1_n_0                      |                                          |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/w[18][4]_i_1_n_0                      |                                          |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/w[19][4]_i_1_n_0                      |                                          |                3 |              5 |         1.67 |
+|  clk         | u_game/u_s2/w[16][4]_i_1_n_0                      |                                          |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/w[20][4]_i_1_n_0                      |                                          |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/w[1][4]_i_1_n_0                       |                                          |                3 |              5 |         1.67 |
+|  clk         | u_game/u_s2/w[21][4]_i_1_n_0                      |                                          |                4 |              5 |         1.25 |
+|  clk         | u_game/u_s2/w[22][4]_i_1_n_0                      |                                          |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/w[23][4]_i_1_n_0                      |                                          |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/w[24][4]_i_1_n_0                      |                                          |                3 |              5 |         1.67 |
+|  clk         | u_game/u_s2/w[28][4]_i_1_n_0                      |                                          |                3 |              5 |         1.67 |
+|  clk         | u_game/u_s2/w[27][4]_i_1_n_0                      |                                          |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/w[26][4]_i_1_n_0                      |                                          |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/w[25][4]_i_1_n_0                      |                                          |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/w[29][4]_i_1_n_0                      |                                          |                3 |              5 |         1.67 |
+|  clk         | u_game/u_s2/w[34][4]_i_1_n_0                      |                                          |                3 |              5 |         1.67 |
+|  clk         | u_game/u_s2/w[2][4]_i_1_n_0                       |                                          |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/w[33][4]_i_1_n_0                      |                                          |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/w[32][4]_i_1_n_0                      |                                          |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/w[30][4]_i_1_n_0                      |                                          |                3 |              5 |         1.67 |
+|  clk         | u_game/u_s2/w[31][4]_i_1_n_0                      |                                          |                3 |              5 |         1.67 |
+|  clk         | u_game/u_s2/w[37][4]_i_1_n_0                      |                                          |                3 |              5 |         1.67 |
+|  clk         | u_game/u_s2/w[38][4]_i_1_n_0                      |                                          |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/w[3][4]_i_1_n_0                       |                                          |                3 |              5 |         1.67 |
+|  clk         | u_game/u_s2/w[36][4]_i_1_n_0                      |                                          |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/w[35][4]_i_1_n_0                      |                                          |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/w[39][4]_i_1_n_0                      |                                          |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/w[45][4]_i_1_n_0                      |                                          |                3 |              5 |         1.67 |
+|  clk         | u_game/u_s2/w[42][4]_i_1_n_0                      |                                          |                3 |              5 |         1.67 |
+|  clk         | u_game/u_s2/w[40][4]_i_1_n_0                      |                                          |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/w[15][4]_i_1_n_0                      |                                          |                3 |              5 |         1.67 |
+|  clk         | u_game/u_s2/w[44][4]_i_1_n_0                      |                                          |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/w[43][4]_i_1_n_0                      |                                          |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/w[47][4]_i_1_n_0                      |                                          |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/w[48][4]_i_1_n_0                      |                                          |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s2/w[46][4]_i_1_n_0                      |                                          |                2 |              5 |         2.50 |
+|  clk         | u_game/u_s3/fl_n[4][6]_i_2_n_0                    | u_game/u_s3/fl_n[4][6]_i_1_n_0           |                2 |              6 |         3.00 |
+|  clk         | u_game/u_s2/u_bb_eval/E[0]                        | u_game/u_s2/segs_acc                     |                2 |              6 |         3.00 |
+|  clk         | u_game/u_s2/wp_i[5]_i_1_n_0                       |                                          |                4 |              6 |         1.50 |
+|  clk         | u_game/u_s3/a_skin_reg_0_31_0_0_i_2_n_0           |                                          |                2 |              6 |         3.00 |
+|  clk         |                                                   | u_game/u_s1/cam_x[17]_i_1_n_0            |                2 |              6 |         3.00 |
+|  clk         | u_game/u_story/ci[5]_i_2_n_0                      | u_game/u_story/ci[5]_i_1_n_0             |                2 |              6 |         3.00 |
+|  clk         | u_video/u_paint/cur[5]_i_1_n_0                    |                                          |                3 |              6 |         2.00 |
+|  clk         | u_game/u_story/CEB2                               | rst                                      |                4 |              6 |         1.50 |
+|  clk         | u_game/u_s3/fl_n[0][6]_i_2_n_0                    | u_game/u_s3/fl_n[0][6]_i_1_n_0           |                1 |              6 |         6.00 |
+|  clk         | u_video/u_eng/drain_cnt                           | rst                                      |                3 |              6 |         2.00 |
+|  clk         | u_game/u_s3/rt_wp[5]_i_1_n_0                      |                                          |                3 |              6 |         2.00 |
+|  clk         | u_game/u_s2/toast_cnt[5]_i_1_n_0                  |                                          |                3 |              6 |         2.00 |
+|  clk         | u_game/u_s2/fn_bi[5]_i_1_n_0                      |                                          |                3 |              6 |         2.00 |
+|  clk         | u_game/u_s3/fl_n[5][6]_i_2_n_0                    | u_game/u_s3/fl_n[5][6]_i_1_n_0           |                2 |              6 |         3.00 |
+|  clk         | u_game/u_s3/fl_n[6][6]_i_2_n_0                    | u_game/u_s3/fl_n[6][6]_i_1_n_0           |                2 |              6 |         3.00 |
+|  clk         | u_game/u_s3/fl_n[2][6]_i_2_n_0                    | u_game/u_s3/fl_n[2][6]_i_1_n_0           |                1 |              6 |         6.00 |
+|  clk         | u_game/u_s2/h_n[5]_i_1_n_0                        |                                          |                3 |              6 |         2.00 |
+|  clk         | u_game/u_s3/a_skin_reg_0_15_0_0_i_1_n_0           |                                          |                2 |              6 |         3.00 |
+|  clk         | u_game/u_s2/notes[2][5]_i_1_n_0                   |                                          |                2 |              6 |         3.00 |
+|  clk         | u_game/u_s2/notes[5][5]_i_1_n_0                   |                                          |                4 |              6 |         1.50 |
+|  clk         | u_game/u_s2/notes[6][5]_i_1_n_0                   |                                          |                2 |              6 |         3.00 |
+|  clk         | u_game/u_s2/notes[4][5]_i_1_n_0                   |                                          |                1 |              6 |         6.00 |
+|  clk         | u_game/u_s2/notes[1][5]_i_1_n_0                   |                                          |                3 |              6 |         2.00 |
+|  clk         | u_game/u_s2/notes[3][5]_i_1_n_0                   |                                          |                1 |              6 |         6.00 |
+|  clk         | u_game/u_s2/notes[0][5]_i_1_n_0                   |                                          |                1 |              6 |         6.00 |
+|  clk         | u_game/u_s2/notes[7][5]_i_1_n_0                   |                                          |                4 |              6 |         1.50 |
+|  clk         | u_game/u_story/fade[5]_i_1_n_0                    | rst                                      |                4 |              6 |         1.50 |
+|  clk         | u_game/u_s1/u_deck/u_reg[2]                       | u_game/u_s1/u_deck/rst_ff_reg[3]_0       |                5 |              6 |         1.20 |
+|  clk         | u_game/u_s3/fl_n[1][6]_i_2_n_0                    | u_game/u_s3/fl_n[1][6]_i_1_n_0           |                2 |              6 |         3.00 |
+|  clk         | u_game/u_s3/fl_n[3][6]_i_2_n_0                    | u_game/u_s3/fl_n[3][6]_i_1_n_0           |                1 |              6 |         6.00 |
+|  clk         | u_game/u_story/step_t[7]_i_2_n_0                  | u_game/u_story/SR[0]                     |                2 |              6 |         3.00 |
+|  clk         | u_game/u_s2/hint_txt[4]_i_1_n_0                   |                                          |                4 |              6 |         1.50 |
+|  clk         | u_game/u_s1/u_deck/u_reg[1]                       | u_game/u_s1/u_deck/rst_ff_reg[3]         |                4 |              6 |         1.50 |
+|  clk         | u_game/u_s2/code0[2]_i_1_n_0                      |                                          |                6 |              6 |         1.00 |
+|  clk         | u_game/u_s3/fl_n[7][6]_i_2_n_0                    | u_game/u_s3/fl_n[7][6]_i_1_n_0           |                3 |              6 |         2.00 |
+|  clk         | u_video/u_paint/st[5]_i_1_n_0                     | rst                                      |                5 |              6 |         1.20 |
+|  clk         | u_game/u_s2/u_bb_eval/cv_wait_reg_1[0]            | rst                                      |                2 |              7 |         3.50 |
+|  clk         | u_game/u_s2/u_bb_eval/cv_wait_reg_0[0]            | rst                                      |                2 |              7 |         3.50 |
+|  clk         | u_game/u_s2/cs_i_rep[6]_i_1_n_0                   |                                          |                2 |              7 |         3.50 |
+|  clk         | u_video/u_paint/maxlen[6]_i_2_n_0                 | u_video/u_paint/maxlen[6]_i_1_n_0        |                2 |              7 |         3.50 |
+|  clk         | u_video/u_paint/fld_idx[6]_i_1_n_0                | rst                                      |                1 |              7 |         7.00 |
+|  clk         | u_video/u_paint/fi[6]_i_1_n_0                     |                                          |                2 |              7 |         3.50 |
+|  clk         |                                                   | u_game/u_s2/segs_acc                     |                2 |              7 |         3.50 |
+|  clk         | u_game/u_s3/protection[6]_i_1_n_0                 | u_game/u_s3/protection[13]_i_1_n_0       |                3 |              7 |         2.33 |
+|  clk         | u_game/u_s3/protection[6]_i_1_n_0                 |                                          |                2 |              7 |         3.50 |
+|  clk         | u_game/u_s2/wcur[6]_i_2_n_0                       | u_game/u_s2/wcur[6]_i_1_n_0              |                2 |              7 |         3.50 |
+|  clk         | u_game/u_s2/cs_best[6]_i_1_n_0                    |                                          |                2 |              7 |         3.50 |
+|  clk         | u_game/u_s3/mulq_return0__7_i_1_n_0               |                                          |                5 |              7 |         1.40 |
+|  clk         | u_video/u_paint/len[7]_i_2_n_0                    | u_video/u_paint/len[7]_i_1_n_0           |                2 |              7 |         3.50 |
+|  clk         | u_game/u_s2/skill_t[9]_i_2__0_n_0                 |                                          |                2 |              7 |         3.50 |
+|  clk         | u_game/u_s2/u_deck/rst_ff_reg[3]                  |                                          |                4 |              7 |         1.75 |
+|  clk         | u_video/u_paint/rep_n[6]_i_1_n_0                  |                                          |                4 |              7 |         1.75 |
+|  clk         | u_game/u_s2/u_bb_eval/cv_wait_reg[0]              | rst                                      |                4 |              7 |         1.75 |
+|  clk         | u_game/u_s3/grace[31]_i_2_n_0                     |                                          |                3 |              7 |         2.33 |
+|  clk         | u_game/u_s3/e_touch_r44_out                       |                                          |                5 |              7 |         1.40 |
+|  clk         | u_game/u_s1/u_ha/start_p_reg[0]                   | rst                                      |                3 |              8 |         2.67 |
+|  clk         | u_video/u_paint/org_x[7]_i_2_n_0                  | u_video/u_paint/org_x[7]_i_1_n_0         |                2 |              8 |         4.00 |
+|  clk         | u_game/u_s2/u_deck/rst_ff_reg[3]_1[0]             | u_game/u_s2/u_deck/skipped_reg_0[0]      |                3 |              8 |         2.67 |
+|  clk         | u_game/u_s1/u_ha/E[0]                             | u_game/u_s1/done_i_1__4_n_0              |                4 |              8 |         2.00 |
+|  clk         | u_game/u_s1/t_used[2][3]_i_1_n_0                  | u_game/u_s1/done_i_1__4_n_0              |                2 |              8 |         4.00 |
+|  clk         |                                                   | u_game/u_s1/lbl_row_r_reg[7]_i_1_n_3     |                3 |              8 |         2.67 |
+|  clk         | u_game/u_s2/u_bb_eval/sn_reg_0_31_0_4_i_1_n_0     |                                          |                1 |              8 |         8.00 |
+|  clk         | u_video/u_paint/org_y[7]_i_2_n_0                  | u_video/u_paint/org_y[7]_i_1_n_0         |                2 |              8 |         4.00 |
+|  clk         | u_game/u_s1/sp_upd                                | u_game/u_s1/u_anim/m[7]_i_1__0_n_0       |                3 |              8 |         2.67 |
+|  clk         | u_game/u_s2/sp_upd                                | u_game/u_s2/u_anim/m[7]_i_1_n_0          |                3 |              8 |         2.67 |
+|  clk         | u_video/u_paint/cond_id[7]_i_1_n_0                | rst                                      |                2 |              8 |         4.00 |
+|  clk         | u_game/u_s1/t_pol                                 | u_game/u_s1/done_i_1__4_n_0              |                4 |              8 |         2.00 |
+|  clk         | u_game/u_s1/t_used[1][3]_i_1_n_0                  | u_game/u_s1/done_i_1__4_n_0              |                5 |              8 |         1.60 |
+|  clk         | u_game/u_s3/q0[3]_i_1_n_0                         |                                          |                5 |              8 |         1.60 |
+|  clk         | u_game/u_s3/a_expo_reg_0_31_0_0_i_2_n_0           |                                          |                3 |              9 |         3.00 |
+|  clk         | u_game/u_story/cnt0                               |                                          |                4 |              9 |         2.25 |
+|  clk         | u_game/u_s3/retreat_t[13]_i_2_n_0                 | u_game/u_s3/retreat_t[13]_i_1_n_0        |                4 |              9 |         2.25 |
+|  clk         | u_video/u_paint/r[8]_i_1_n_0                      |                                          |                3 |              9 |         3.00 |
+|  clk         | u_video/u_paint/rc[8]_i_1_n_0                     |                                          |                4 |              9 |         2.25 |
+|  clk         | u_video/u_eng/ly[8]_i_1_n_0                       |                                          |                5 |              9 |         1.80 |
+|  clk         | u_video/u_paint/rr[8]_i_1_n_0                     |                                          |                4 |              9 |         2.25 |
+|  clk         | u_video/u_eng/x_end[10]_i_2_n_0                   | u_video/u_eng/x_end[10]_i_1_n_0          |                2 |              9 |         4.50 |
+|  clk         | u_video/u_paint/wr[8]_i_1_n_0                     |                                          |                4 |              9 |         2.25 |
+|  clk         | u_video/u_paint/c[8]_i_1_n_0                      |                                          |                4 |              9 |         2.25 |
+|  clk         | u_game/u_s3/a_expo_reg_0_15_0_0_i_1_n_0           |                                          |                3 |              9 |         3.00 |
+|  clk         | u_game/u_s3/skill_t[13]_i_2_n_0                   | u_game/u_s3/skill_t[13]_i_1_n_0          |                5 |             10 |         2.00 |
+|  clk         | u_video/u_eng/prod_x_reg_i_1_n_0                  |                                          |                4 |             10 |         2.50 |
+|  clk         | u_video/u_tim/vc                                  | rst                                      |                3 |             10 |         3.33 |
+|  clk         | u_game/u_s3/clear_left[13]_i_2_n_0                | u_game/u_s3/clear_left[13]_i_1_n_0       |                5 |             10 |         2.00 |
+|  clk         | u_game/u_s3/s_ab_j[10]_i_1_n_0                    |                                          |                4 |             10 |         2.50 |
+|  clk         | u_game/u_s2/u_deck/u_reg[1]_rep                   | u_game/u_s2/u_deck/u_reg[1]_rep_0        |                3 |             10 |         3.33 |
+|  clk         | u_video/u_eng/x_end[10]_i_2_n_0                   | u_video/u_eng/x_start[9]_i_1_n_0         |                3 |             10 |         3.33 |
+|  clk         | u_game/u_s2/slow_t[5]_i_2_n_0                     | u_game/u_s2/slow_t[5]_i_1_n_0            |                3 |             10 |         3.33 |
+|  clk         | u_game/u_s2/u_deck/rst_ff_reg[3]                  | u_game/u_s2/u_deck/u_reg[3]_rep__1       |                5 |             11 |         2.20 |
+|  clk         |                                                   | u_game/u_story/step_t[3]                 |                6 |             11 |         1.83 |
+|  clk         | u_video/u_eng/dx[10]_i_1_n_0                      |                                          |                5 |             11 |         2.20 |
+|  clk         |                                                   | u_in/d_s3_setf                           |                5 |             11 |         2.20 |
+|  clk         |                                                   | u_video/u_tim/hc[10]_i_1_n_0             |                6 |             11 |         1.83 |
+|  clk         | u_game/u_s2/hint_sink[5]_i_1_n_0                  |                                          |                5 |             11 |         2.20 |
+|  clk         | u_video/u_paint/quad[1]_i_1_n_0                   |                                          |                4 |             11 |         2.75 |
+|  clk         | u_game/u_s2/mk_vx                                 |                                          |                4 |             12 |         3.00 |
+|  clk         | u_video/base_px1[11]_i_1_n_0                      | rst                                      |                2 |             12 |         6.00 |
+|  clk         | u_game/u_s2/un_hi_r_i_1_n_0                       |                                          |                6 |             12 |         2.00 |
+|  clk         | u_video/u_paint/pc[11]_i_1_n_0                    |                                          |                6 |             12 |         2.00 |
+|  clk         | u_video/u_paint/t_addr[11]_i_1_n_0                | rst                                      |                3 |             12 |         4.00 |
+|  clk         | u_game/u_s2/u_deck/rst_ff_reg[3]_0                | u_game/u_s2/u_deck/u_reg[3]_rep__1_0     |                5 |             13 |         2.60 |
+|  clk         | u_game/u_s2/u_bb_eval/done1                       | u_game/u_s2/cv_start_reg_n_0             |                4 |             13 |         3.25 |
+|  clk         | u_video/u_paint/clr[12]_i_2_n_0                   | u_video/u_paint/clr[12]_i_1_n_0          |                4 |             13 |         3.25 |
+|  clk         | u_game/u_s3/interview[13]_i_2_n_0                 | u_game/u_s3/interview[13]_i_1_n_0        |                5 |             14 |         2.80 |
+|  clk         | u_game/u_s3/notice_t[13]_i_1_n_0                  | rst                                      |                5 |             14 |         2.80 |
+|  clk         | u_game/u_s3/tea_x[31]_i_2_n_0                     |                                          |                4 |             14 |         3.50 |
+|  clk         | u_game/u_s3/cloak_t[13]_i_1_n_0                   | u_game/u_s3/interview[13]_i_1_n_0        |                3 |             14 |         4.67 |
+|  clk         | u_game/u_s3/remaining[10]_i_2_n_0                 | u_game/u_s3/remaining[10]_i_1_n_0        |                5 |             14 |         2.80 |
+|  clk         |                                                   | u_game/u_s1/cam_x[19]_i_1_n_0            |                7 |             14 |         2.00 |
+|  clk         | u_game/u_s2/play_t[13]_i_2_n_0                    | u_game/u_s2/play_t[13]_i_1_n_0           |                5 |             14 |         2.80 |
+|  clk         |                                                   | u_game/u_s1/cam_y[19]_i_1_n_0            |                7 |             15 |         2.14 |
+|  clk         | u_video/u_paint/sp[14]_i_1_n_0                    |                                          |                5 |             15 |         3.00 |
+|  clk         | u_game/u_story/cy_acc[13][15]_i_1_n_0             | u_game/u_story/cnt0                      |                5 |             16 |         3.20 |
+|  clk         | u_game/u_story/cy_acc[18][15]_i_1_n_0             | u_game/u_story/cnt0                      |                6 |             16 |         2.67 |
+|  clk         | u_game/u_story/cy_acc[0][15]_i_2_n_0              | u_game/u_story/cnt0                      |                6 |             16 |         2.67 |
+|  clk         | u_game/u_story/cy_acc[17][15]_i_1_n_0             | u_game/u_story/cnt0                      |                6 |             16 |         2.67 |
+|  clk         | u_game/u_story/cy_acc[19][15]_i_1_n_0             | u_game/u_story/cnt0                      |                5 |             16 |         3.20 |
+|  clk         | u_game/u_story/cy_acc[15][15]_i_1_n_0             | u_game/u_story/cnt0                      |                5 |             16 |         3.20 |
+|  clk         | u_game/u_story/cy_acc[23][15]_i_1_n_0             | u_game/u_story/cnt0                      |                8 |             16 |         2.00 |
+|  clk         | u_game/u_story/cy_acc[28][15]_i_1_n_0             | u_game/u_story/cnt0                      |                4 |             16 |         4.00 |
+|  clk         | u_game/u_story/cy_acc[32][15]_i_1_n_0             | u_game/u_story/cnt0                      |                6 |             16 |         2.67 |
+|  clk         | u_game/u_story/cy_acc[33][15]_i_1_n_0             | u_game/u_story/cnt0                      |                5 |             16 |         3.20 |
+|  clk         | u_game/u_story/cy_acc[37][15]_i_1_n_0             | u_game/u_story/cnt0                      |                4 |             16 |         4.00 |
+|  clk         | u_game/u_story/cy_acc[7][15]_i_1_n_0              | u_game/u_story/cnt0                      |                6 |             16 |         2.67 |
+|  clk         | u_game/u_story/cy_acc[9][15]_i_1_n_0              | u_game/u_story/cnt0                      |                7 |             16 |         2.29 |
+|  clk         | u_game/u_story/cy_acc[35][15]_i_1_n_0             | u_game/u_story/cnt0                      |                8 |             16 |         2.00 |
+|  clk         | u_game/u_story/cy_acc[36][15]_i_1_n_0             | u_game/u_story/cnt0                      |                4 |             16 |         4.00 |
+|  clk         | u_game/u_story/cy_acc[31][15]_i_1_n_0             | u_game/u_story/cnt0                      |                6 |             16 |         2.67 |
+|  clk         | u_game/u_story/cy_acc[27][15]_i_1_n_0             | u_game/u_story/cnt0                      |                4 |             16 |         4.00 |
+|  clk         | u_game/u_story/cy_acc[4][15]_i_1_n_0              | u_game/u_story/cnt0                      |                5 |             16 |         3.20 |
+|  clk         | u_game/u_story/cy_acc[2][15]_i_1_n_0              | u_game/u_story/cnt0                      |                3 |             16 |         5.33 |
+|  clk         | u_game/u_story/cy_acc[29][15]_i_1_n_0             | u_game/u_story/cnt0                      |                5 |             16 |         3.20 |
+|  clk         | u_game/u_story/cy_acc[26][15]_i_1_n_0             | u_game/u_story/cnt0                      |                4 |             16 |         4.00 |
+|  clk         | u_game/u_story/cy_acc[34][15]_i_1_n_0             | u_game/u_story/cnt0                      |                5 |             16 |         3.20 |
+|  clk         | u_game/u_story/cy_acc[30][15]_i_1_n_0             | u_game/u_story/cnt0                      |                7 |             16 |         2.29 |
+|  clk         | u_game/u_story/cy_acc[8][15]_i_1_n_0              | u_game/u_story/cnt0                      |                6 |             16 |         2.67 |
+|  clk         | u_game/u_story/cy_acc[5][15]_i_1_n_0              | u_game/u_story/cnt0                      |                5 |             16 |         3.20 |
+|  clk         | u_game/u_story/cy_acc[38][15]_i_1_n_0             | u_game/u_story/cnt0                      |                4 |             16 |         4.00 |
+|  clk         | u_game/u_story/cy_acc[3][15]_i_1_n_0              | u_game/u_story/cnt0                      |                4 |             16 |         4.00 |
+|  clk         | u_game/u_story/cy_acc[25][15]_i_1_n_0             | u_game/u_story/cnt0                      |                6 |             16 |         2.67 |
+|  clk         | u_game/u_story/cy_acc[24][15]_i_1_n_0             | u_game/u_story/cnt0                      |                9 |             16 |         1.78 |
+|  clk         | u_game/u_story/cy_acc[39][15]_i_1_n_0             | u_game/u_story/cnt0                      |                6 |             16 |         2.67 |
+|  clk         | u_game/u_story/cy_acc[40][15]_i_1_n_0             | u_game/u_story/cnt0                      |                3 |             16 |         5.33 |
+|  clk         | u_game/u_story/cy_acc[41][15]_i_1_n_0             | u_game/u_story/cnt0                      |                4 |             16 |         4.00 |
+|  clk         | u_game/u_story/cy_tmp                             |                                          |                4 |             16 |         4.00 |
+|  clk         | u_game/u_s2/lfsr[15]_i_1_n_0                      | rst                                      |                7 |             16 |         2.29 |
+|  clk         | u_game/u_s3/tsteps[15]_i_2_n_0                    | u_game/u_s3/tsteps[15]_i_1_n_0           |                5 |             16 |         3.20 |
+|  clk         | u_game/u_s3/tea_grow_until[15]_i_2_n_0            | u_game/u_s3/tea_grow_until[15]_i_1_n_0   |                5 |             16 |         3.20 |
+|  clk         | u_game/u_s3/lfsr                                  | rst                                      |                9 |             16 |         1.78 |
+|  clk         | u_game/u_s2/hist__0                               |                                          |                4 |             16 |         4.00 |
+|  clk         | u_game/u_s1/lfsr                                  | rst                                      |                5 |             16 |         3.20 |
+|  clk         | u_game/u_s2/cs_bs[15]_i_1_n_0                     |                                          |                5 |             16 |         3.20 |
+|  clk         | u_game/u_story/cy_acc[6][15]_i_1_n_0              | u_game/u_story/cnt0                      |                3 |             16 |         5.33 |
+|  clk         | u_game/u_story/cx_r_reg_0_63_0_2_i_2_n_0          |                                          |                4 |             16 |         4.00 |
+|  clk         | u_game/u_story/cy_acc[16][15]_i_1_n_0             | u_game/u_story/cnt0                      |                9 |             16 |         1.78 |
+|  clk         | u_game/u_story/cy_acc[11][15]_i_1_n_0             | u_game/u_story/cnt0                      |                5 |             16 |         3.20 |
+|  clk         | u_game/u_story/cy_acc[14][15]_i_1_n_0             | u_game/u_story/cnt0                      |                6 |             16 |         2.67 |
+|  clk         | u_game/u_s2/cs_sc_r                               |                                          |                4 |             16 |         4.00 |
+|  clk         | u_game/u_story/cy_acc[1][15]_i_1_n_0              | u_game/u_story/cnt0                      |                4 |             16 |         4.00 |
+|  clk         | u_game/u_story/cy_acc[20][15]_i_1_n_0             | u_game/u_story/cnt0                      |                6 |             16 |         2.67 |
+|  clk         | u_game/u_story/cy_acc[21][15]_i_1_n_0             | u_game/u_story/cnt0                      |                7 |             16 |         2.29 |
+|  clk         | u_game/u_story/cy_acc[22][15]_i_1_n_0             | u_game/u_story/cnt0                      |                7 |             16 |         2.29 |
+|  clk         | u_game/u_story/cy_acc[10][15]_i_1_n_0             | u_game/u_story/cnt0                      |                6 |             16 |         2.67 |
+|  clk         | u_game/u_story/cy_acc[12][15]_i_1_n_0             | u_game/u_story/cnt0                      |                7 |             16 |         2.29 |
+|  clk         | u_game/u_story/E[0]                               | u_game/h_shard_i_1_n_0                   |               12 |             17 |         1.42 |
+|  clk         | u_game/u_s1/nd2_r                                 |                                          |                6 |             17 |         2.83 |
+|  clk         | u_game/u_s2/wm_a                                  |                                          |                5 |             17 |         3.40 |
+|  clk         |                                                   | u_game/h_shard_i_1_n_0                   |                8 |             17 |         2.12 |
+|  clk         |                                                   | u_game/u_s2/sp_upd_i_1_n_0               |               11 |             17 |         1.55 |
+|  clk         | u_game/u_s3/tea_x[31]_i_2_n_0                     | u_game/u_s3/tea_x[31]_i_1_n_0            |                7 |             17 |         2.43 |
+|  clk         |                                                   | u_seg/cnt[0]_i_1_n_0                     |                5 |             17 |         3.40 |
+|  clk         |                                                   | u_game/u_s1/p2_eq_01_r[155]_i_1_n_0      |               15 |             18 |         1.20 |
+|  clk         | u_game/u_s3/a_wat_reg_0_31_0_0_i_2_n_0            |                                          |                6 |             18 |         3.00 |
+|  clk         | u_game/u_s3/patrol_top_r                          |                                          |                5 |             18 |         3.60 |
+|  clk         | u_game/u_s3/a_wat_reg_0_15_0_0_i_1_n_0            |                                          |                6 |             18 |         3.00 |
+|  clk         | u_game/u_story/cf_r                               |                                          |                9 |             18 |         2.00 |
+|  clk         | u_video/u_eng/acc[18]_i_1_n_0                     |                                          |                5 |             19 |         3.80 |
+|  clk         | u_game/u_s2/u[4]_i_1__0_n_0                       | rst                                      |                6 |             19 |         3.17 |
+|  clk         | u_game/u_s2/cs_p0_r[19]_i_1_n_0                   |                                          |                5 |             19 |         3.80 |
+|  clk         |                                                   | u_in/cnt[11][0]_i_1_n_0                  |                5 |             20 |         4.00 |
+|  clk         |                                                   | u_in/cnt[14][0]_i_1_n_0                  |                5 |             20 |         4.00 |
+|  clk         |                                                   | u_in/cnt[10][0]_i_1_n_0                  |                5 |             20 |         4.00 |
+|  clk         |                                                   | u_in/cnt[2][0]_i_1_n_0                   |                5 |             20 |         4.00 |
+|  clk         |                                                   | u_in/cnt[12][0]_i_1_n_0                  |                5 |             20 |         4.00 |
+|  clk         |                                                   | u_in/cnt[15][0]_i_1_n_0                  |                5 |             20 |         4.00 |
+|  clk         |                                                   | u_in/cnt[9][0]_i_1_n_0                   |                5 |             20 |         4.00 |
+|  clk         |                                                   | u_in/cnt[6][0]_i_1_n_0                   |                5 |             20 |         4.00 |
+|  clk         |                                                   | u_in/cnt[8][0]_i_1_n_0                   |                5 |             20 |         4.00 |
+|  clk         |                                                   | u_in/cnt[5][0]_i_1_n_0                   |                5 |             20 |         4.00 |
+|  clk         |                                                   | u_in/cnt[7][0]_i_1_n_0                   |                5 |             20 |         4.00 |
+|  clk         |                                                   | u_in/cnt[3][0]_i_1_n_0                   |                5 |             20 |         4.00 |
+|  clk         |                                                   | u_in/cnt[1][0]_i_1_n_0                   |                5 |             20 |         4.00 |
+|  clk         | u_video/u_paint/cell_ret[3]_i_1_n_0               |                                          |               11 |             20 |         1.82 |
+|  clk         |                                                   | u_in/cnt[0][0]_i_1_n_0                   |                5 |             20 |         4.00 |
+|  clk         |                                                   | u_in/cnt[16][0]_i_1_n_0                  |                5 |             20 |         4.00 |
+|  clk         |                                                   | u_in/cnt[18][0]_i_1_n_0                  |                5 |             20 |         4.00 |
+|  clk         |                                                   | u_in/cnt[19][0]_i_1_n_0                  |                5 |             20 |         4.00 |
+|  clk         |                                                   | u_in/cnt[20][0]_i_1_n_0                  |                5 |             20 |         4.00 |
+|  clk         | u_game/u_s2/talk_tag[1]_i_1_n_0                   |                                          |                8 |             20 |         2.50 |
+|  clk         | u_game/u_s1/u_deck/E[0]                           |                                          |                5 |             20 |         4.00 |
+|  clk         |                                                   | u_in/cnt[17][0]_i_1_n_0                  |                5 |             20 |         4.00 |
+|  clk         | u_game/u_s2/py[19]_i_1_n_0                        |                                          |               12 |             20 |         1.67 |
+|  clk         |                                                   | u_in/cnt[4][0]_i_1_n_0                   |                5 |             20 |         4.00 |
+|  clk         | u_game/u_s2/tgt[19]_i_1_n_0                       |                                          |                5 |             20 |         4.00 |
+|  clk         | u_video/u_paint/t_we_i_1_n_0                      | rst                                      |               10 |             20 |         2.00 |
+|  clk         | u_game/u_s2/px[19]_i_1__0_n_0                     |                                          |               11 |             20 |         1.82 |
+|  clk         | u_game/u_s1/px[19]_i_1__1_n_0                     | u_game/u_s1/done_i_1__4_n_0              |                5 |             20 |         4.00 |
+|  clk         | u_game/u_s1/py[19]_i_1__0_n_0                     | u_game/u_s1/done_i_1__4_n_0              |                5 |             20 |         4.00 |
+|  clk         |                                                   | u_in/cnt[13][0]_i_1_n_0                  |                5 |             20 |         4.00 |
+|  clk         | u_game/u_s1/ty[19]_i_1_n_0                        |                                          |                6 |             21 |         3.50 |
+|  clk         | u_video/u_paint/w1[11]_i_1_n_0                    |                                          |                8 |             21 |         2.62 |
+|  clk         | u_game/u_s3/s_ab_r                                |                                          |               13 |             21 |         1.62 |
+|  clk         | u_game/u_s2/wp_sid_r                              |                                          |               11 |             24 |         2.18 |
+|  clk         | u_game/u_s1/eq_used[0][3]_i_1_n_0                 | u_game/u_s1/done_i_1__4_n_0              |               11 |             24 |         2.18 |
+|  clk         |                                                   | u_game/u_s1/term1_str[132]_i_1_n_0       |               15 |             24 |         1.60 |
+|  clk         | u_game/u_s1/q_x                                   |                                          |               10 |             24 |         2.40 |
+|  clk         | u_game/u_s2/bk_y[11]_i_1_n_0                      |                                          |               13 |             24 |         1.85 |
+|  clk         | u_game/u_s3/ei[5]_i_2_n_0                         | u_game/u_s3/ei[5]_i_1_n_0                |               14 |             25 |         1.79 |
+|  clk         | u_game/u_s3/grace[31]_i_2_n_0                     | u_game/u_s3/grace[31]_i_1_n_0            |                8 |             25 |         3.12 |
+|  clk         | u_game/u_s3/mulq_return0__7_i_1_n_0               | u_game/u_s3/buffer[31]_i_1_n_0           |                8 |             25 |         3.12 |
+|  clk         | u_game/u_s3/rep_x[26]_i_1_n_0                     |                                          |                9 |             27 |         3.00 |
+|  clk         | u_game/u_s3/lift_top0[30]_i_2_n_0                 | u_game/u_s3/lift_top0[30]_i_1_n_0        |                8 |             27 |         3.38 |
+|  clk         | u_game/u_s3/rep_y[26]_i_1_n_0                     |                                          |               13 |             27 |         2.08 |
+|  clk         | u_in/hold[0]_i_2_n_0                              | u_in/hold[0]_i_1_n_0                     |                7 |             27 |         3.86 |
+|  clk         | u_game/u_s3/dy                                    |                                          |                8 |             28 |         3.50 |
+|  clk         | u_game/u_s3/px[31]_i_1_n_0                        |                                          |               11 |             28 |         2.55 |
+|  clk         | u_video/u_paint/fld_id[7]_i_1_n_0                 | rst                                      |               13 |             28 |         2.15 |
+|  clk         | u_video/u_eng/obj_idx_reg[7]_i_1_n_0              | rst                                      |               14 |             28 |         2.00 |
+|  clk         | u_game/u_s3/lift_top0[30]_i_2_n_0                 | u_game/u_s3/lift_top1[31]_i_1_n_0        |               10 |             29 |         2.90 |
+|  clk         | u_video/u_paint/sp_line                           |                                          |               10 |             29 |         2.90 |
+|  clk         | u_game/u_s3/tea_vy[31]_i_2_n_0                    | u_game/u_s3/tea_vy[31]_i_1_n_0           |                9 |             30 |         3.33 |
+|  clk         | u_game/u_story/t                                  | u_game/u_story/step_t[3]                 |               11 |             30 |         2.73 |
+|  clk         | u_game/u_s2/fn_bi[5]_i_1_n_0                      | u_game/u_s2/fn_best[29]_i_1_n_0          |                8 |             30 |         3.75 |
+|  clk         | u_game/u_s3/tea_y[31]_i_1_n_0                     |                                          |                6 |             30 |         5.00 |
+|  clk         |                                                   | u_game/u_s2/cv_start_reg_n_0             |               23 |             30 |         1.30 |
+|  clk         | u_game/u_s3/stride[31]_i_2_n_0                    |                                          |                8 |             31 |         3.88 |
+|  clk         | u_game/u_s3/tea_y_next_r[31]_i_1_n_0              |                                          |                8 |             32 |         4.00 |
+|  clk         | u_game/u_s3/dj_rem                                |                                          |                9 |             32 |         3.56 |
+|  clk         |                                                   | u_game/u_s1/term0_str[132]_i_1_n_0       |               21 |             32 |         1.52 |
+|  clk         | u_game/u_s3/a_age_reg_0_31_0_0_i_2_n_0            |                                          |                9 |             32 |         3.56 |
+|  clk         | u_game/u_s3/dv_b[31]_i_1_n_0                      |                                          |                7 |             32 |         4.57 |
+|  clk         | u_game/u_s3/reach_r[31]_i_1_n_0                   |                                          |                8 |             32 |         4.00 |
+|  clk         | u_game/u_s3/dv_a[47]_i_1_n_0                      |                                          |               15 |             32 |         2.13 |
+|  clk         | u_game/u_s2/p_0_in                                |                                          |                4 |             32 |         8.00 |
+|  clk         | u_game/u_s3/a_age_reg_0_15_0_0_i_1_n_0            |                                          |                9 |             32 |         3.56 |
+|  clk         | u_game/u_s3/stride[31]_i_2_n_0                    | u_game/u_s3/stride[31]_i_1_n_0           |                8 |             32 |         4.00 |
+|  clk         | u_game/u_s3/elapsed[31]_i_2_n_0                   | u_game/u_s3/elapsed[31]_i_1_n_0          |                8 |             32 |         4.00 |
+|  clk         | u_game/u_s3/takeoff[31]_i_2_n_0                   | u_game/u_s3/takeoff[31]_i_1_n_0          |               10 |             32 |         3.20 |
+|  clk         |                                                   | u_game/u_s3/mulq_return0__3_i_1_n_0      |               14 |             32 |         2.29 |
+|  clk         | u_game/u_s3/dj_rem                                | u_game/u_s3/dj_rise[31]_i_1_n_0          |                8 |             32 |         4.00 |
+|  clk         | u_game/u_s3/py[31]_i_1_n_0                        |                                          |               24 |             32 |         1.33 |
+|  clk         | u_game/u_s3/adt_return0__3__0_i_1_n_0             |                                          |               12 |             32 |         2.67 |
+|  clk         | u_video/u_paint/w0                                |                                          |               13 |             32 |         2.46 |
+|  clk         | u_video/u_eng/prod_x_reg_i_2_n_0                  |                                          |               10 |             32 |         3.20 |
+|  clk         | u_game/u_s3/mulq_return0__3__0_i_1_n_0            |                                          |                8 |             32 |         4.00 |
+|  clk         | u_video/u_paint/rr_end[8]_i_1_n_0                 |                                          |               14 |             38 |         2.71 |
+|  clk         | u_game/u_s3/a_ynew_r                              |                                          |               11 |             38 |         3.45 |
+|  clk         | u_game/u_s3/rt_x0_out                             |                                          |               10 |             38 |         3.80 |
+|  clk         |                                                   | u_in/sw_reg[4]_29[60]                    |               33 |             38 |         1.15 |
+|  clk         |                                                   | u_video/u_tim/SR[0]                      |               22 |             38 |         1.73 |
+|  clk         | u_video/u_paint/plist[90]_i_1_n_0                 |                                          |               19 |             39 |         2.05 |
+|  clk         | u_video/u_eng/CEB2                                | rst                                      |               29 |             40 |         1.38 |
+|  clk         | u_game/u_s3/rt_x                                  |                                          |               11 |             44 |         4.00 |
+|  clk         | u_game/u_s2/in_dx[1]_i_1_n_0                      |                                          |               14 |             44 |         3.14 |
+|  clk         | u_game/u_s3/contacts[47]_i_2_n_0                  | u_game/u_s3/contacts[47]_i_1_n_0         |               12 |             48 |         4.00 |
+|  clk         | u_video/u_tim/frame_tick_reg_0                    | rst                                      |               22 |             53 |         2.41 |
+|  clk         | u_game/u_s3/dv_root[61]_i_1_n_0                   | u_game/u_s3/mulq_return0__3_i_1_n_0      |               23 |             62 |         2.70 |
+|  clk         | u_game/u_s3/a_y_reg_0_15_0_0_i_1_n_0              |                                          |               11 |             64 |         5.82 |
+|  clk         | u_game/u_s3/a_x_reg_0_31_0_0_i_2_n_0              |                                          |               10 |             64 |         6.40 |
+|  clk         | u_game/u_s3/a_x_reg_0_15_0_0_i_1_n_0              |                                          |                9 |             64 |         7.11 |
+|  clk         | u_game/u_s3/a_y_reg_0_31_0_0_i_2_n_0              |                                          |               13 |             64 |         4.92 |
+|  clk         | u_game/u_s3/old_x                                 |                                          |               23 |             64 |         2.78 |
+|  clk         | u_game/u_s3/e_skin_r[5]_i_1_n_0                   |                                          |               44 |             67 |         1.52 |
+|  clk         | u_game/u_s3/dv_i                                  | u_game/u_s3/mulq_return0__3_i_1_n_0      |               32 |             70 |         2.19 |
+|  clk         | u_video/u_eng/pa_alpha[3]_i_1_n_0                 |                                          |               37 |             72 |         1.95 |
+|  clk         | u_game/u_s3/vis_desc0_out                         |                                          |                9 |             72 |         8.00 |
+|  clk         | u_game/u_s3/e_dir_r_i_1_n_0                       |                                          |               40 |             74 |         1.85 |
+|  clk         | u_game/u_s3/vn_dir15_out                          |                                          |               46 |             84 |         1.83 |
+|  clk         | u_game/u_s3/fl_x_reg_64_127_0_2_i_1_n_0           |                                          |               22 |             88 |         4.00 |
+|  clk         | u_game/u_s3/fl_x_reg_128_191_0_2_i_1_n_0          |                                          |               22 |             88 |         4.00 |
+|  clk         | u_game/u_s3/fl_x_reg_448_511_0_2_i_1_n_0          |                                          |               22 |             88 |         4.00 |
+|  clk         | u_game/u_s3/fl_x_reg_192_255_0_2_i_1_n_0          |                                          |               22 |             88 |         4.00 |
+|  clk         | u_game/u_s3/fl_x_reg_384_447_0_2_i_1_n_0          |                                          |               22 |             88 |         4.00 |
+|  clk         | u_game/u_s3/fl_x_reg_320_383_0_2_i_1_n_0          |                                          |               22 |             88 |         4.00 |
+|  clk         | u_game/u_s3/fl_x_reg_256_319_0_2_i_1_n_0          |                                          |               22 |             88 |         4.00 |
+|  clk         | u_game/u_s3/fl_x_reg_0_63_0_2_i_4_n_0             |                                          |               22 |             88 |         4.00 |
+|  clk         |                                                   | u_game/u_s1/done_i_1__4_n_0              |               49 |             89 |         1.82 |
+|  clk         | u_video/u_eng/CEC                                 | rst                                      |               58 |             97 |         1.67 |
+|  clk         | u_game/u_s2/wh_mem_reg_0_63_0_2_i_1_n_0           |                                          |               28 |            112 |         4.00 |
+|  clk         | u_game/u_s3/pt_pair_r                             |                                          |               60 |            156 |         2.60 |
+|  clk         | u_video/u_eng/E[0]                                |                                          |              100 |            283 |         2.83 |
+|  clk         | u_game/u_s2/snap_reg_0_1_0_5_i_1_n_0              |                                          |               45 |            360 |         8.00 |
+|  clk         |                                                   | rst                                      |              333 |            717 |         2.15 |
+|  clk         |                                                   |                                          |              715 |           1339 |         1.87 |
++--------------+---------------------------------------------------+------------------------------------------+------------------+----------------+--------------+
+
+
